@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import * as R from 'ramda';
 import classNames from 'classnames';
+import BbMajorScale from './Bb-major-scale.m4a';
+import BbPentaScale from './Bb-penta-scale.m4a';
+import BbBluesScale from './Bb-blues-scale.m4a';
 
 const major = ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A'];
 const penta = ['Bb', 'Db', 'Eb', 'F', 'Ab'];
@@ -55,7 +58,7 @@ class App extends Component {
                     la tierce ou la 7ème peuvent être majeure ou mineure, les autres sont "justes".
                 </p>
                 <Scale scale={major} />
-                <audio src='/Bb-major-scale.m4a' controls />
+                <audio src={BbMajorScale} controls />
                 <h2>Le thème</h2>
                 <p>
                     Là j'ai simplement surligné les notes utilisées sur le thème.
@@ -74,7 +77,7 @@ class App extends Component {
                     <li>La tierce et la septième sont mineures</li>
                 </ul>
                 <Scale scale={penta} />
-                <audio src='/Bb-penta-scale.m4a' controls />
+                <audio src={BbPentaScale} controls />
                 <h2>Gamme blues</h2>
                 <p>
                     En réalité Sara Vaughan utilise la gamme "blues" et pas la pentatonique mineure.
@@ -84,7 +87,7 @@ class App extends Component {
                     "note blues", ici c'est un Mi.
                 </p>
                 <Scale scale={blues} highlights={['E']} />
-                <audio src='/Bb-blues-scale.m4a' controls />
+                <audio src={BbBluesScale} controls />
                 <h2>Exercices</h2>
                 <p>
                     Un bon exercice pour s'assurer qu'on a bien les gammes en tête, c'est de les transposer.
