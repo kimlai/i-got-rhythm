@@ -89,7 +89,11 @@ class App extends Component {
                 <Scale scale={blues} highlights={['E']} />
                 <audio src={BbBluesScale} controls />
                 <h2>Exercices</h2>
-                <em>Note : ne passer à l'exercice suivant que lorsqu'on est à l'aise sur le précédent.</em>
+                <p>
+                    <em>
+                        Note : ne passer à l'exercice suivant que lorsqu'on est à l'aise sur le précédent.
+                    </em>
+                </p>
                 <h3>1. Écouter</h3>
                 <em>Niveau : facile</em>
                 <p>
@@ -102,11 +106,13 @@ class App extends Component {
                     Jouer la première note de l'enregistrement, puis mettre pause, réciter la gamme,
                     puis vérifier avec l'enregistrement.
                 </p>
-                <em>
-                    Note : au début c'est plus simple d'y aller note par note : écouter la première note,
-                    mettre pause, la chanter, chanter la suivante, vérifier avec l'enregistrement,
-                    si c'est juste continuer, si c'est faux recommencer depuis le début.
-                </em>
+                <p>
+                    <em>
+                        Note : au début c'est plus simple d'y aller note par note : écouter la première note,
+                        mettre pause, la chanter, chanter la suivante, vérifier avec l'enregistrement,
+                        si c'est juste continuer, si c'est faux recommencer depuis le début.
+                    </em>
+                </p>
                 <h3>2. Arpèger</h3>
                 <em>Niveau : intermédiaire</em>
                 <p>
@@ -122,10 +128,12 @@ class App extends Component {
                 <p>
                     L'exercice consiste à retrouver l'arpège de Si bémol à partir de la gamme majeure.
                 </p>
-                <em>
-                    Note : sur une de ses variations sur le thème, Sara Vaughan utilise l'arpège
-                    de Si bémol majeur.
-                </em>
+                <p>
+                    <em>
+                        Note : sur une de ses variations sur le thème, Sara Vaughan utilise l'arpège
+                        de Si bémol majeur.
+                    </em>
+                </p>
                 <h3>3. Transposer</h3>
                 <em>Niveau : difficile</em>
                 <p>
