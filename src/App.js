@@ -113,7 +113,7 @@ class App extends Component {
                         si c'est juste continuer, si c'est faux recommencer depuis le début.
                     </em>
                 </p>
-                <h3>2. Arpèger</h3>
+                <h3>3. Arpèger</h3>
                 <em>Niveau : intermédiaire</em>
                 <p>
                     Un arpège est une suite de note qui forme un accord. Les accords les plus simples
@@ -134,7 +134,7 @@ class App extends Component {
                         de Si bémol majeur.
                     </em>
                 </p>
-                <h3>3. Transposer</h3>
+                <h3>4. Transposer</h3>
                 <em>Niveau : difficile</em>
                 <p>
                     Un bon exercice pour s'assurer qu'on a bien les gammes en tête, c'est de les transposer.
@@ -144,7 +144,7 @@ class App extends Component {
                     Ça sert à s'assurer qu'on a bien assimilé les intervalles de la gamme, et pas juste
                     appris la gamme de Si bémol par coeur.
                 </p>
-                <h3>Improviser</h3>
+                <h3>5. Improviser</h3>
                 <em>Niveau : très difficile</em>
                 <p>
                     Une fois la gamme bien en tête, on peut essayer de jouer avec. La réciter en partant
