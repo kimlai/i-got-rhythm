@@ -89,6 +89,40 @@ class App extends Component {
                 <Scale scale={blues} highlights={['E']} />
                 <audio src={BbBluesScale} controls />
                 <h2>Exercices</h2>
+                <em>Note : ne passer à l'exercice suivant que lorsqu'on est à l'aise sur le précédent.</em>
+                <h3>1. Écouter</h3>
+                <em>Niveau : facile</em>
+                <p>
+                    Pour commencer, bien écouter les enregistrements, et les chanter en même temps.
+                    Ça permet de se mettre les gammes dans l'oreille.
+                </p>
+                <h3>2. Reproduire</h3>
+                <em>Niveau : intermédiaire</em>
+                <p>
+                    Jouer la première note de l'enregistrement, puis mettre pause, réciter la gamme,
+                    puis vérifier avec l'enregistrement.
+                </p>
+                <h3>2. Arpèger</h3>
+                <em>Niveau : intermédiaire</em>
+                <p>
+                    Un arpège est une suite de note qui forme un accord. Les accords les plus simples
+                    sont appelé des "triades", et sont formé de trois notes de la gamme (on se concentre
+                    uniquement sur la gamme majeure ici) : fondamentale, tierce et quinte (1 3M 5 sur les
+                    diagrammes).
+                </p>
+                <p>
+                    En regardant les fonctions des notes de la gamme de Si bémol majeure, on peut
+                    retrouver l'accord (triade) de Si bémol.
+                </p>
+                <p>
+                    L'exercice consiste à retrouver l'arpège de Si bémol à partir de la gamme majeure.
+                </p>
+                <em>
+                    Note : sur une de ses variations sur le thème, Sara Vaughan utilise l'arpège
+                    de Si bémol majeur.
+                </em>
+                <h3>3. Transposer</h3>
+                <em>Niveau : difficile</em>
                 <p>
                     Un bon exercice pour s'assurer qu'on a bien les gammes en tête, c'est de les transposer.
                     Partir de n'importe quelle note (par exemple Fa) et réciter la gamme de Fa majeur.
@@ -96,6 +130,13 @@ class App extends Component {
                 <p>
                     Ça sert à s'assurer qu'on a bien assimilé les intervalles de la gamme, et pas juste
                     appris la gamme de Si bémol par coeur.
+                </p>
+                <h3>Improviser</h3>
+                <em>Niveau : très difficile</em>
+                <p>
+                    Une fois la gamme bien en tête, on peut essayer de jouer avec. La réciter en partant
+                    d'une autre note que la fondamentale, ou bien en sautant certaines notes de la gamme,
+                    en alternant montées et descentes, pour former des petites phrases.
                 </p>
             </div>
         );
