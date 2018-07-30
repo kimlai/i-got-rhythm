@@ -102,6 +102,11 @@ class App extends Component {
                     Jouer la première note de l'enregistrement, puis mettre pause, réciter la gamme,
                     puis vérifier avec l'enregistrement.
                 </p>
+                <em>
+                    Note : au début c'est plus simple d'y aller note par note : écouter la première note,
+                    mettre pause, la chanter, chanter la suivante, vérifier avec l'enregistrement,
+                    si c'est juste continuer, si c'est faux recommencer depuis le début.
+                </em>
                 <h3>2. Arpèger</h3>
                 <em>Niveau : intermédiaire</em>
                 <p>
