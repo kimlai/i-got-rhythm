@@ -2,13 +2,18 @@ body {
     font-size: 16px;
     padding: 24px 6px;
 }
-
-
+@media screen and (min-width: 960px) {
+    body {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
 
 h2 {
     margin: 0;
     font-size: 21px;
-    margin-top: 24px;
+    margin-top: 48px;
+    margin-bottom: 24px;
 }
 
 .scale {
