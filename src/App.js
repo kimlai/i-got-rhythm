@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import * as R from 'ramda';
 import classNames from 'classnames';
+import Tone from 'tone';
 import BbMajorScale from './Bb-major-scale.m4a';
 import BbPentaScale from './Bb-penta-scale.m4a';
 import BbBluesScale from './Bb-blues-scale.m4a';
@@ -16,30 +17,72 @@ const noteFunction = (i) => {
     return R.nth(i, functions);
 };
 
+const synth = new Tone.Synth().toMaster();
+
+const noteOf = R.curry((pitch, note) => {
+    return {name: note, pitch};
+});
+
 const Scale = ({ scale, highlights = [] }) => {
     const [before, after] = R.splitWhen(R.equals(R.head(scale)), harmonic);
-    const notes = R.concat(R.concat(after, before), [R.head(scale)]);
+    const notes = R.concat(
+        R.concat(
+            R.map(noteOf(3), after),
+            R.map(noteOf(4), before)
+        ),
+        [noteOf(4, R.head(scale))]
+    );
 
     return (
         <div className='scale'>
             {notes.map((note, i) => (
-                <div key={i}>
-                    <div className='noteFunction'>{noteFunction(i)}</div>
-                    <div
-                        className={classNames(
-                            'note',
-                            { inScale: R.contains(note, scale),
-                              highlighted: R.contains(note, highlights),
-                            }
-                        )}
-                    >
-                        {note}
-                    </div>
-                </div>
+                <Note
+                    key={i}
+                    note={note}
+                    fn={noteFunction(i)}
+                    inScale={R.contains(note.name, scale)}
+                    highlighted={R.contains(note.name, highlights)}
+                />
             ))}
         </div>
     );
 };
+
+class Note extends Component {
+    state = {
+        playing: false,
+    }
+
+    play = ({name, pitch}) => () => {
+        synth.triggerAttackRelease(`${name}${pitch}`, 0.25);
+        this.setState({ playing: true });
+        setTimeout(() => { this.setState({ playing: false }) }, 500);
+    }
+
+    render() {
+        const {
+            inScale,
+            highlighted,
+            note,
+            fn,
+        } = this.props;
+        const {
+            playing,
+        } = this.state;
+
+        return (
+            <div>
+                <div className='noteFunction'>{fn}</div>
+                <div
+                    onClick={this.play(note)}
+                    className={classNames('note', { inScale, highlighted, playing })}
+                >
+                    {note.name}
+                </div>
+            </div>
+        );
+    }
+}
 
 class App extends Component {
     render() {

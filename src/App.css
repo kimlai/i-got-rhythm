@@ -36,12 +36,16 @@ li {
     justify-content: center;
     align-items: center;
     background: #EFEFEF;
+    cursor: pointer;
 }
 .note.inScale {
     background: #CAEBF2;
 }
 .note.highlighted {
     border: 1px solid;
+}
+.note.playing {
+    background: #FF3B3F;
 }
 .noteFunction {
     font-size: 12px;
